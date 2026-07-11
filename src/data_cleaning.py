@@ -100,7 +100,7 @@ promo_problems_number = products_df.loc[(products_df.promo_price.str.contains(r"
 print(f"The column promo_price has in total {promo_problems_number} wrong values. This is {round(((promo_problems_number / products_df.shape[0]) * 100), 2)}% of the rows of the DataFrame")
 
 #The column promo_price has in total 9232 wrong values. This is 92.39% of the rows of the DataFrame
-# Below is Luise's solution: she deleted this column, since she thought it could cause a bias problem
+
 
 products_cl = products_df.drop(columns=["promo_price"])
 
