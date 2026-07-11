@@ -73,18 +73,23 @@ eniac-discount-strategy/
  **Does discount intensity drive revenue growth?**
 
 ![Monthly revenue vs. promotional depth](images/total_revenue_with_time.png)
-*Revenue (bars) and promotional investment depth (line) rise and fall together every month, both peaking in the Nov'17–Jan'18 sale season. Revenue never keeps growing once the promotional spike ends — discounts behave like a short-term lever, not a lasting lift.*
+Revenue (bars) and promotional investment depth (line) rise and fall together every month, both peaking in the Nov'17–Jan'18 sale season. Revenue never keeps growing once the promotional spike ends — discounts behave like a short-term lever, not a lasting lift.
  
+
+
 
 **Which categories carry the discount burden?**
 ![Revenue vs discount rate by category](images/total_revenue_by_category.png)
-*Storage and Smartphone generate by far the most revenue while carrying some of the lowest average discount rates. Meanwhile Headset, Speaker and Case — much smaller revenue contributors — carry the deepest average discounts, up to ~55% for Case. This is a promotional allocation problem, not a demand problem.*
+Storage and Smartphone generate by far the most revenue while carrying some of the lowest average discount rates. Meanwhile Headset, Speaker and Case — much smaller revenue contributors — carry the deepest average discounts, up to ~55% for Case. This is a promotional allocation problem, not a demand problem.
+ 
+
  
  
  **Do full-price customers behave differently than bargain hunters?**
 <p align="center">
   <img src="images/average_basket_value.png" alt="Average basket value: full price vs heavy promo" width="400">
-</p>*Full-MSRP (Manufacturer's Suggested Retail Price) baskets average €242.50 per order — almost 3x the €84.10 average for baskets with ≥25% catalog-wide discounts. Chasing discount-driven order volume is not the same as growing revenue per customer.*
+</p>
+Full-MSRP (Manufacturer's Suggested Retail Price) baskets average €242.50 per order — almost 3x the €84.10 average for baskets with ≥25% catalog-wide discounts. Chasing discount-driven order volume is not the same as growing revenue per customer.
 
 
 ## 🔗 How to Use This Project
