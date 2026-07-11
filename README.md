@@ -50,21 +50,15 @@ Eniac, an e-commerce retailer of Apple products and accessories, saw orders rise
 ```
 eniac-discount-strategy/
 ├── data/
-│   ├── raw/              # original CSV exports (orders, orderlines, products, brands)
-│   └── processed/        # cleaned tables output by src/data_cleaning.py
+│          # original CSV exports (orders, orderlines, products, brands) 
 ├── src/
 │   ├── data_cleaning.py  # loads & cleans all 4 raw tables
 │   ├── categorize.py     # builds a readable product taxonomy from name/desc keywords
-│   ├── analysis.py       # computes every metric behind the board presentation
 │   └── visualizations.py # recreates every chart from the board presentation
-├── notebooks/
-│   └── eniac_discount_analysis.ipynb   # main analysis notebook — start here
-├── scripts/
-│   └── build_notebook.py # regenerates the notebook from src/ (for maintainers)
+│
 ├── images/                # chart PNGs, also embedded below
 ├── reports/
 │   └── Eniac_Discount_Strategy_2017-2018.pdf   # final board presentation
-├── requirements.txt
 └── README.md
 ```
 
