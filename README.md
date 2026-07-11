@@ -43,7 +43,7 @@ Eniac, an e-commerce retailer of Apple products and accessories, saw orders rise
 
 - **Programming:** Python 
 - **Libraries:** pandas, matplotlib, seaborn
-- **Environment:** Jupyter Notebook
+- **Environment:** Google Colab
 
 ## 📁 Project Structure
 
