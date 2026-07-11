@@ -1,20 +1,20 @@
 import pandas as pd
 
-url = 'your_csv_file_url_link'
+url = 'your_products_csv_file_url_link'
 path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
 products = pd.read_csv(path)
 
-url = 'your_csv_file_url_link'
+url = 'your_brands_csv_file_url_link'
 path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
 brands = pd.read_csv(path)
 
 
-url = 'your_csv_file_url_link'
+url = 'your_orders_csv_file_url_link'
 path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
 orders = pd.read_csv(path)
 
 
-url = 'your_csv_file_url_link'
+url = 'your_orderlines_csv_file_url_link'
 path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
 orderlines = pd.read_csv(path)
 
