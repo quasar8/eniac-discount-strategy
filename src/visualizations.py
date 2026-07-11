@@ -94,3 +94,70 @@ ax1.set_title("Strategic Re-Allocation: Revenue vs. Discount Depth by Category",
 fig.tight_layout()
 plt.show()
 
+
+# ------------------------------------------------------------------
+# Chart 3: Overall Sales Distribution: Volume Reliance (full price vs. discounted)
+# ------------------------------------------------------------------
+
+
+is_full_price = products_orderlines["discount_pct"] <= 0
+share = is_full_price.value_counts(normalize=True) * 100
+full_price_vs_discount = pd.Series({
+    "Full Price Sales": share.get(True, 0.0),
+    "Discounted Sales": share.get(False, 0.0),
+})
+ 
+fig, ax = plt.subplots(figsize=(6, 6))
+colors = [RED, TEAL]
+wedges, _, autotexts = ax.pie(
+    full_price_vs_discount.values,
+    labels=full_price_vs_discount.index,
+    autopct="%.0f%%",
+    colors=colors,
+    startangle=90,
+    wedgeprops=dict(width=0.4),
+    pctdistance=0.8,
+)
+for t in autotexts:
+    t.set_color("white")
+    t.set_fontweight("bold")
+ax.set_title("Overall Sales Distribution: Volume Reliance", fontweight="bold")
+fig.tight_layout()
+plt.show()
+
+# ------------------------------------------------------------------
+# Chart 4: Consumer Behavioral Split: Average Basket Value (full price vs. heavy promo)
+# ------------------------------------------------------------------
+ 
+order_level = products_orderlines.groupby("id_order").agg(
+    order_total=("unit_price_total", "sum"),
+    max_discount_pct=("discount_pct", "max"),
+    min_discount_pct=("discount_pct", "min"),
+)
+full_price_orders = order_level.loc[order_level["max_discount_pct"] <= 0, "order_total"]
+heavy_promo_orders = order_level.loc[order_level["min_discount_pct"] >= 0.25, "order_total"]
+ 
+avg_basket = pd.DataFrame({
+    "basket_type": ["Full MSRP Baskets\n(0% Discount)", "Heavy Promo Baskets\n(\u226525% Catalog Slashes)"],
+    "avg_order_total": [full_price_orders.mean(), heavy_promo_orders.mean()],
+})
+ 
+fig, ax = plt.subplots(figsize=(7, 6))
+sns.barplot(data=avg_basket, x="basket_type", y="avg_order_total", hue="basket_type",
+            palette=[TEAL, RED], legend=False, ax=ax, width=0.5)
+ax.set_ylabel("Average Order Total Realized")
+ax.set_xlabel("")
+ax.set_title("Consumer Behavioral Split: Average Basket Value (\u20ac)", fontweight="bold")
+ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"\u20ac{x:,.0f}"))
+ax.set_ylim(0, avg_basket["avg_order_total"].max() * 1.25)
+ 
+for i, val in enumerate(avg_basket["avg_order_total"]):
+    ellipse = mpatches.Ellipse((i, val * 1.13), width=0.62, height=val * 0.16,
+                                facecolor="none", edgecolor="#555555", linewidth=1.5, zorder=3)
+    ax.add_patch(ellipse)
+    ax.annotate(f"\u20ac{val:,.2f}", xy=(i, val * 1.13), ha="center", va="center",
+                fontweight="bold", fontsize=13, zorder=4)
+ 
+fig.tight_layout()
+plt.show()
+
