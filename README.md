@@ -105,26 +105,21 @@ Full-MSRP (Manufacturer's Suggested Retail Price) baskets average €242.50 per 
 
 ## 🚀 Future Work
 
-- Build a live discount-vs-margin dashboard so pricing decisions no longer require a manual re-run of this analysis
-- Model price elasticity per category to set a *data-driven* discount ceiling instead of a flat cap
-- Bring in cost/margin data (not present in this export) to translate € discount given into true profit impact, not just revenue impact
 - A/B test the "product bundles instead of storewide discounts" recommendation before a full rollout
-
-## 🏆 Recommendations
-
-- **Set price floors for core hardware** — cap discounts on Desktop and other flagship hardware at ~5% outside the November–December peak
-- **Use product bundles** — pair discounted accessories (headsets, speakers, cases) with full-price hardware to clear stock without cutting hardware margins directly
-- **Restrict store-wide sales to a defined peak window** — stop broad, catalog-wide discounts from December through February rather than running promotions year-round
 
 ## 👥 Team
  
 This project was completed as a group project by the **Discount Detectives** team:
  
-- [Your Name] — [role / GitHub profile]
-- [Teammate 2] — [role / GitHub profile]
-- [Teammate 3] — [role / GitHub profile]
-- [Teammate 4] — [role / GitHub profile]
+- Safak Koclu
+- Emre G.
+- Ravi G.
+- Seshi
 
 ## 📧 Contact
 
-Feel free to reach out with questions or feedback about this analysis.
+## 📧 Contact
+- Name : Safak Koclu
+- Email: koclusafak@gmail.com
+- LinkedIn: [My LinkedIn Profile](https://www.linkedin.com/in/safak-koclu/)
+- GitHub: [My GitHub Profile](https://github.com/quasar8)
