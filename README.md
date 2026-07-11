@@ -105,18 +105,16 @@ Full-MSRP (Manufacturer's Suggested Retail Price) baskets average €242.50 per 
 
 ## 🚀 Future Work
 
-- A/B test the "product bundles instead of storewide discounts" recommendation before a full rollout
+- Run an A/B test on the homepage "SHOP NOW" button (iPhone 13 banner) to lift click-through rate into the purchase funnel — testing button color (red) and copy ("SEE DEALS") separately and combined (Versions A/B/C/D) against the current design.
 
 ## 👥 Team
  
-This project was completed as a group project by the **Discount Detectives** team:
+This project was completed as a group project by the **Discount Detectives** team (classmates from WBS Coding School):
  
 - Safak Koclu
 - Emre G.
 - Ravi G.
 - Seshi
-
-## 📧 Contact
 
 ## 📧 Contact
 - Name : Safak Koclu
