@@ -87,21 +87,12 @@ Full-MSRP (Manufacturer's Suggested Retail Price) baskets average €242.50 per 
 
 
 ## 🔗 How to Use This Project
-
-1. **Set up the environment:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. **Main analysis:** open [`notebooks/eniac_discount_analysis.ipynb`](notebooks/eniac_discount_analysis.ipynb) and run all cells — it walks through cleaning, categorization, every metric, and every chart with commentary.
-3. **Reproduce just the cleaned data:**
-   ```bash
-   python src/data_cleaning.py
-   ```
-4. **Reproduce just the charts:**
-   ```bash
-   python src/visualizations.py
-   ```
-5. **Board presentation:** the final, stakeholder-facing deck is in [`reports/Eniac_Discount_Strategy_2017-2018.pdf`](reports/Eniac_Discount_Strategy_2017-2018.pdf).
+1. **Get the data:** download `products.csv`, `brands.csv`, `orders.csv` and `orderlines.csv` from the **Data** section above.
+2. **Upload the data:** upload the 4 CSV files to your own Google Drive, or keep them locally on your machine, then get a link/path you can use to load them into Google Colab.
+3. **Clean the data:** open [`src/data_cleaning.py`](src/data_cleaning.py) in Colab, plug in your file links (replace the `'your_csv_file_url_link'` placeholders), and run the code to clean the raw tables.
+4. **Categorize the products:** run the code in [`src/categorize.py`](src/categorize.py) to add the product category column on top of the cleaned data.
+5. **Get the charts you want:** run the relevant code from [`src/visualizations.py`](src/visualizations.py) to generate any of the 4 charts.
+6. **Board presentation:** the final, stakeholder-facing deck is in [`reports/Eniac_Discount_Strategy_2017-2018.pdf`](reports/Eniac_Discount_Strategy_2017-2018.pdf).
 
 ## 🚀 Future Work
 
