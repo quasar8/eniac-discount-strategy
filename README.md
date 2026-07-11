@@ -71,13 +71,16 @@ eniac-discount-strategy/
 ## 📈 Visualizations
 
  **Does discount intensity drive revenue growth?**
-![Monthly revenue vs. promotional depth](images/01_monthly_revenue_vs_discount.png)
+
+![Monthly revenue vs. promotional depth](images/total_revenue_with_time.png)
 *Revenue (bars) and promotional investment depth (line) rise and fall together every month, both peaking in the Nov'17–Jan'18 sale season. Revenue never keeps growing once the promotional spike ends — discounts behave like a short-term lever, not a lasting lift.*
  
+
 **Which categories carry the discount burden?**
-![Revenue vs discount rate by category](images/02_revenue_vs_discount_by_category.png)
+![Revenue vs discount rate by category](images/total_revenue_by_category.png)
 *Storage and Smartphone generate by far the most revenue while carrying some of the lowest average discount rates. Meanwhile Headset, Speaker and Case — much smaller revenue contributors — carry the deepest average discounts, up to ~55% for Case. This is a promotional allocation problem, not a demand problem.*
  
+
 **How much of the catalog sells at full price?**
 ![Full price vs discounted sales share](images/04_full_price_vs_discount_share.png)
 *Only a small share of orderlines are ever sold at full MSRP — the vast majority of realised revenue comes from discounted sales.*
