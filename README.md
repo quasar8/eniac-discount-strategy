@@ -6,7 +6,7 @@ Eniac, an e-commerce retailer of Apple products and accessories, saw orders rise
 
 ## 📊 Dataset & Sources
 
-- **Source:** Internal order-management export provided by WBS Coding School as part of a Data Science course case study (not public data)
+- **Source:** Internal order-management export provided by WBS Coding School as part of a Data Science course case study
 - **Tables:** `orders.csv` (226,910 rows), `orderlines.csv` (293,984 rows), `products.csv` (19,327 rows), `brands.csv` (188 rows)
 - **Time period:** January 2017 – March 2018
 - **Key fields used:**
@@ -29,20 +29,19 @@ Eniac, an e-commerce retailer of Apple products and accessories, saw orders rise
   - `products.price` is not stored as a float type → converted with `pd.to_numeric` after fixing the decimal problem
   - `products.promo_price` has a 2- or 3-decimal-points problem in ~92% of its values → too corrupted to be reliably repaired, so the column was dropped entirely (the true promo price is recovered later from `orderlines.unit_price` instead)
   - `orders.csv` also mixes real completed sales with baskets, pending payments and cancellations → filtered to `state == "Completed"` so only realised revenue is counted
-  - Full cleaning logic and rationale: [`src/data_cleaning.py`](src/data_cleaning.py)
 
 ## 🚀 Key Findings & Results
-
+ 
 - The raw data overstated sales volume by **26%** before cleaning — the majority of the "extra" volume came from orders containing at least one malformed price line
 - Promotional depth and revenue move together month-to-month, both peaking in Nov'17–Jan'18 and both collapsing right after — **discounts behave like a short-term acquisition lever, not a durable revenue engine**
 - High-revenue categories (storage, smartphones) already sell well with below-average discount rates, while lower-revenue accessory categories (cases, speakers, headsets) carry the deepest average markdowns — **Eniac has a promotional allocation problem, not a demand problem**
-- **93%** of orderlines are sold at some discount, leaving only **7%** moving at full price
-- Full-MSRP baskets average **€178** per order vs. **€83** for baskets with ≥25% catalog slashes — full-price customers are meaningfully more valuable per order
+- **94%** of orderlines are sold at some discount, leaving only **6%** moving at full price
+- Full-MSRP baskets (MSRP = Manufacturer's Suggested Retail Price, i.e. the undiscounted list price) average **€242.50** per order vs. **€84.10** for baskets with ≥25% catalog slashes — full-price customers are meaningfully more valuable per order
 - **Business impact:** capping discounts on core hardware and shifting accessory clearance to bundles could protect margin without sacrificing the order volume Marketing cares about
 
 ## 🛠️ Technologies Used
 
-- **Programming:** Python 3
+- **Programming:** Python 
 - **Libraries:** pandas, matplotlib, seaborn
 - **Environment:** Jupyter Notebook
 
@@ -112,6 +111,15 @@ eniac-discount-strategy/
 - **Set price floors for core hardware** — cap discounts on Desktop and other flagship hardware at ~5% outside the November–December peak
 - **Use product bundles** — pair discounted accessories (headsets, speakers, cases) with full-price hardware to clear stock without cutting hardware margins directly
 - **Restrict store-wide sales to a defined peak window** — stop broad, catalog-wide discounts from December through February rather than running promotions year-round
+
+## 👥 Team
+ 
+This project was completed as a group project by the **Discount Detectives** team:
+ 
+- [Your Name] — [role / GitHub profile]
+- [Teammate 2] — [role / GitHub profile]
+- [Teammate 3] — [role / GitHub profile]
+- [Teammate 4] — [role / GitHub profile]
 
 ## 📧 Contact
 
