@@ -6,7 +6,7 @@ Eniac, an e-commerce retailer of Apple products and accessories, saw orders rise
 
 ## 📊 Dataset & Sources
 
-- **Source:** Internal order-management export provided by WBS Coding School. [`orders.csv.csv`](data/orders.csv)).
+- **Source:** Internal order-management export provided by WBS Coding School. [`orders.csv`](data/orders.csv)).
 - **Tables:** `orders.csv` (226,910 rows), `orderlines.csv` (293,984 rows), `products.csv` (19,327 rows), `brands.csv` (188 rows)
 - **Time period:** January 2017 – March 2018
 - **Key fields used:**
