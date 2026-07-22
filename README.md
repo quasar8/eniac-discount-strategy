@@ -2,7 +2,7 @@
 
 ## 🎯 Project Overview
 
-Eniac, an e-commerce retailer of Apple products and accessories, saw orders rise but revenue fall, prompting a Board investigation into whether discounting is helping or hurting the business. This project cleans two years (2017–2018) of raw internal order data and analyzes discount patterns across products, categories, and time. The analysis finds that 93% of orderlines are sold on sale, promotional spikes don't translate into lasting revenue growth, and full-price customers spend ~2x more per basket — pointing to a promotional *allocation* problem rather than a demand problem.
+Eniac, an e-commerce retailer of Apple products and accessories, saw orders rise but revenue fall, prompting a Board investigation into whether discounting is helping or hurting the business. This project cleans 1 year and 2 months (01.2017–03.2018) of raw internal order data and analyzes discount patterns across products, categories, and time. The analysis finds that 93% of orderlines are sold on sale, promotional spikes don't translate into lasting revenue growth, and full-price customers spend ~2x more per basket — pointing to a promotional *allocation* problem rather than a demand problem.
 
 ## 📊 Dataset & Sources
 
